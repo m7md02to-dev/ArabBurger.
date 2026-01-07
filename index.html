@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>عرب برجر | مكة المكرمة - الشرائع</title>
+<meta content="عرب برجر - مكة المكرمة الشرائع مخطط 12 شارع إبراهيم الخزامي. اطلب واتساب أو اتصل الآن." name="description"/>
+<style>
+    :root{
+      --brand:#b31b1b;
+      --brand2:#f08a00;
+      --ink:#111;
+      --muted:#6b6b6b;
+      --bg:#ffffff;
+      --card:#ffffff;
+      --line:#ececec;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+    }
+    a{color:inherit}
+    .container{max-width:1100px; margin:0 auto; padding:0 18px}
+    /* Top bar */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:saturate(1.4) blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:12px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width:220px;
+    }
+    .brand img{height:56px; width:auto; display:block}
+    .brand .name{font-weight:800; letter-spacing:.2px}
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;
+    }
+    .nav a{
+      text-decoration:none;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid transparent;
+      color:#222;
+      font-weight:600;
+      font-size:14px;
+    }
+    .nav a:hover{border-color:var(--line); background:#fafafa}
+    .actions{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-start; align-items:center;
+      min-width:260px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      text-decoration:none;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-weight:800;
+      font-size:14px;
+      box-shadow:none;
+      white-space:nowrap;
+    }
+    .btn.primary{
+      background:#1fa855; color:#fff; border-color:#1fa855;
+    }
+    .btn.call{background:#fff}
+    /* Hero */
+    .hero{
+      padding:18px 0 26px;
+      background:linear-gradient(180deg, rgba(179,27,27,.05), rgba(240,138,0,.03), rgba(255,255,255,1));
+    }
+    .hero-banner{
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .hero-banner img{width:100%; height:auto; display:block}
+    .hero-under{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width:900px){
+      .hero-under{grid-template-columns:1fr}
+      .brand{min-width:auto}
+      .actions{min-width:auto}
+    }
+    .panel{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--card);
+      box-shadow:var(--shadow);
+      padding:16px;
+    }
+    .panel h1{margin:0 0 8px; font-size:26px}
+    .panel p{margin:0; color:var(--muted); line-height:1.8}
+    .panel .cta-row{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
+    .mini-info{
+      display:flex; flex-direction:column; gap:10px;
+      justify-content:space-between;
+    }
+    .pill{
+      display:flex; gap:10px; align-items:center; justify-content:space-between;
+      border:1px dashed rgba(179,27,27,.35);
+      background:rgba(179,27,27,.04);
+      padding:12px 14px;
+      border-radius:14px;
+      font-weight:700;
+    }
+    .pill span{color:var(--muted); font-weight:700}
+    /* Sections */
+    section{padding:26px 0}
+    .section-title{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-bottom:14px}
+    .section-title h2{margin:0; font-size:22px}
+    .section-title .sub{color:var(--muted); font-size:14px}
+    .features{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+    @media (max-width:900px){.features{grid-template-columns:1fr}}
+    .feature{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--card);
+      padding:16px;
+      box-shadow:var(--shadow);
+    }
+    .feature .k{font-weight:900; margin-bottom:6px}
+    .feature .d{color:var(--muted); line-height:1.8; font-size:14px}
+    .cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+    @media (max-width:900px){.cards{grid-template-columns:1fr}}
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--card);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .card img{width:100%; height:210px; object-fit:cover; display:block}
+    .card .body{padding:14px}
+    .card .body .t{font-weight:900; margin-bottom:6px}
+    .card .body .s{color:var(--muted); line-height:1.7; font-size:14px}
+    /* Contact */
+    .contact{
+      background:linear-gradient(135deg, rgba(179,27,27,.06), rgba(240,138,0,.04));
+      border-top:1px solid var(--line);
+    }
+    .contact-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:14px; align-items:stretch}
+    @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+    .contact .panel{height:100%}
+    .kv{display:grid; gap:10px; margin-top:10px}
+    .kv .row{display:flex; gap:10px; align-items:flex-start; justify-content:space-between; border:1px solid var(--line); border-radius:14px; padding:12px 14px; background:#fff}
+    .kv .row b{min-width:120px}
+    .footer{
+      padding:18px 0 28px;
+      color:#444;
+      font-size:13px;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+<div class="topbar">
+<div class="container">
+<div class="topbar-inner">
+<div class="brand">
+<img alt="شعار عرب برجر" src="logo.png"/>
+<div>
+<div class="name">عرب برجر</div>
+<div style="color:var(--muted); font-size:13px;">مكة المكرمة - الشرائع</div>
+</div>
+</div>
+<div aria-label="روابط الأقسام" class="nav">
+<a href="#about">نبذة</a>
+<a href="#popular">أشهر الطلبات</a><a href="#menu">المنيو</a>
+<a href="#location">الموقع</a>
+<a href="#contact">التواصل</a>
+</div>
+<div class="actions">
+<a class="btn primary" href="https://wa.me/966558517542?text=السلام%20عليكم%20ابي%20اطلب%20من%20عرب%20برجر">اطلب واتساب</a>
+<a class="btn call" href="tel:+966558517542">اتصال</a>
+</div>
+</div>
+</div>
+</div>
+<main>
+<div class="hero">
+<div class="container">
+<div class="hero-banner">
+<img alt="عرب برجر - بانر" src="hero.png"/>
+</div>
+<div class="hero-under">
+<div class="panel" id="about">
+<h1>عرب برجر | طعم البرجر على أصوله</h1>
+<p>برجر طازج وخيارات متنوعة. اطلب الآن بسهولة عبر واتساب أو اتصل علينا مباشرة. نخدم أهل مكة المكرمة (الشرائع - مخطط 12).</p>
+<div class="cta-row">
+<a class="btn primary" href="https://wa.me/966558517542?text=السلام%20عليكم%20ابي%20اطلب%20من%20عرب%20برجر">اطلب عبر واتساب</a>
+<a class="btn" href="tel:+966558517542">اتصل: 0558517542</a>
+<a class="btn" href="tel:+966558517542">اتصل: 0558517542</a>
+</div>
+</div>
+<div class="mini-info">
+<div class="pill"><span>جودة ثابتة</span> <b>كل يوم</b></div>
+<div class="pill"><span>تجهيز سريع</span> <b>واستلام سهل</b></div>
+<div class="pill"><span>اطلب الآن</span> <b>واتساب/اتصال</b></div>
+</div>
+</div>
+</div>
+</div>
+<section>
+<div class="container">
+<div class="section-title">
+<h2>ليش عرب برجر؟</h2>
+<div class="sub">مميزات تهمك قبل الطلب</div>
+</div>
+<div class="features">
+<div class="feature">
+<div class="k">مكونات طازجة</div>
+<div class="d">نركز على الطعم والجودة ونظافة التحضير.</div>
+</div>
+<div class="feature">
+<div class="k">خدمة سريعة</div>
+<div class="d">طلبك يوصلنا بسرعة ونجهزه بأقرب وقت.</div>
+</div>
+<div class="feature">
+<div class="k">خيارات متنوعة</div>
+<div class="d">كلاسيك، سبايسي، وكومبو حسب رغبتك.</div>
+</div>
+</div>
+</div>
+</section>
+<section id="popular">
+<div class="container">
+<div class="section-title">
+<h2>أشهر الطلبات</h2>
+<div class="sub">اختر اللي يناسبك واطلب فورًا</div>
+</div>
+<div class="cards">
+<div class="card">
+<img alt="كلاسيك برجر" src="burger.png"/>
+<div class="body">
+<div class="t">كلاسيك برجر</div>
+<div class="s">طعم غني وإضافات طازجة.</div>
+</div>
+</div>
+<div class="card">
+<img alt="برجر سبايسي" src="hero.png"/>
+<div class="body">
+<div class="t">برجر سبايسي</div>
+<div class="s">لعشاق النكهات الحارة.</div>
+</div>
+</div>
+<div class="card">
+<img alt="كومبو" src="burger.png"/>
+<div class="body">
+<div class="t">كومبو</div>
+<div class="s">خيار عملي ومشبع (برجر + بطاطس + مشروب).</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="menu"><div class="container"><div class="section-title"><h2>المنيو</h2><div class="sub">صورة المنيو (اضغط للتكبير).</div></div><a href="menu.png" rel="noopener" target="_blank"><img alt="منيو عرب برجر" src="menu.png" style="width:100%; height:auto; border-radius:16px; border:1px solid var(--line);"/></a></div></section>
+<section id="location">
+<div class="container">
+<div class="section-title">
+<h2>موقعنا</h2>
+<div class="sub">مكة المكرمة</div>
+<div class="actions" style="justify-content:flex-start; margin-top:14px;"><a class="btn primary" href="https://maps.app.goo.gl/2Xrx9cpmeHfKBmed9?g_st=aw" rel="noopener" target="_blank">افتح على الخريطة</a><a class="btn call" href="tel:+966558517542">اتصال</a></div></div>
+<div class="panel">
+<p style="margin:0; font-weight:800">مكة المكرمة – الشرائع – مخطط 12 – شارع إبراهيم الخزامي</p>
+
+</div>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="container">
+<div class="contact-grid">
+<div class="panel">
+<div class="section-title" style="margin-bottom:0">
+<h2 style="margin:0">تواصل معنا</h2>
+<div class="sub">واتساب / اتصال / بريد</div>
+</div>
+<div class="kv">
+<div class="row"><b>واتساب</b> <a href="https://wa.me/966558517542?text=السلام%20عليكم%20ابي%20اطلب%20من%20عرب%20برجر">0553550035</a></div>
+<div class="row"><b>اتصال</b> <a href="tel:+966558517542">0558517542</a></div>
+<div class="row"><b>اتصال</b> <a href="tel:+966558517542">0558517542</a></div>
+<div class="row"><b>الإيميل</b> <a href="mailto:rasayamani@gmail.com">rasayamani@gmail.com</a></div>
+</div>
+<div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+<a class="btn primary" href="https://wa.me/966558517542?text=السلام%20عليكم%20ابي%20اطلب%20من%20عرب%20برجر">اطلب واتساب الآن</a>
+<a class="btn" href="tel:+966558517542">اتصال سريع</a>
+</div>
+</div>
+<div class="panel" style="display:flex; align-items:center; justify-content:center; gap:12px; flex-direction:column; text-align:center;">
+<img alt="عرب برجر" src="logo.png" style="max-width:220px; width:70%; height:auto"/>
+<div style="font-weight:900">عرب برجر</div>
+<div style="color:var(--muted); line-height:1.7">مكة المكرمة – الشرائع – مخطط 12<br/>شارع إبراهيم الخزامي</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="footer">
+          © عرب برجر — جميع الحقوق محفوظة
+        </div>
+</div>
+</section>
+</main>
+<script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>
